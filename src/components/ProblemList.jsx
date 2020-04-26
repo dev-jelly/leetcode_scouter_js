@@ -1,38 +1,40 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from "axios";
+import MaterialTable from "material-table";
 
 const ProblemList = () => {
   const [problems, setProblems] = useState([]);
 
+  useEffect(() => {
+    (async () => {
+      const response = await axios.get('/problems.json')
+
+      setProblems(Object.values(response.data));
+    })();
+  });
+
   return (
-    <table>
-      <thead>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Difficulty</th>
-        <th>Likes</th>
-        <th>Dislikes</th>
-        <th>Rate</th>
-        <th>Acceptance</th>
-        <th>Submitted</th>
-        <th>Accepted</th>
-      </thead>
-      <tbody>
-      {problems.map(p => {
-        return (
-          <tr key={p.id}>
-            <td>{p.problem_number}</td>
-            <td><a href={"https://leetcode.com/problems/" + p.slug}>{p.title}</a></td>
-            <td>{p.difficulty}</td>
-            <td>{p.slug}</td>
-            <td>{p.likes}</td>
-            <th>{p.acceptance}</th>
-            <td>{p.submitted}</td>
-            <td>{p.accepted}</td>
-          </tr>
-        )
-      })}
-      </tbody>
-    </table>
+
+    <div>
+      <MaterialTable
+        columns={[
+          {title: "ID", field: "problemNumber"},
+          {title: "Title", field: "slug"},
+          {title: "Difficulty", field: "difficulty"},
+          {title: "Likes", field: "likes"},
+          {title: "Dislikes", field: "dislikes"},
+          {title: "Rate", field: "rate"},
+          {title: "Acceptance", field: "acceptance"},
+          {title: "Submitted", field: "submitted"},
+          {title: "Accepted", field: "accepted"},
+        ]}
+        data={problems}
+
+      >
+
+      </MaterialTable>
+    </div>
+
   )
 };
 

@@ -26,7 +26,7 @@ const ProblemList = () => {
               return (
                 <a
                   className="problem-link"
-                  href={`https://leetcode.com/api/problems/${p.slug}`}
+                  href={`https://leetcode.com/problems/${p.slug}`}
                 >
                   <span className={"title"}>
                     {p.slug.replace(/-/g, " ").toUpperCase()}
@@ -113,7 +113,7 @@ const ProblemList = () => {
           pageSize: 100,
           pageSizeOptions: [100, 200, 400, 800, 3000],
         }}
-      ></MaterialTable>
+      />
     </div>
   );
 };

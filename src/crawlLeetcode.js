@@ -48,10 +48,10 @@ const crawlLikes = async () => {
         });
         const $likes = await page.$("#app > div > div > div > div > div > div > div > div > div > div > div > div > div > button:nth-child(2) > span");
         const $dislikes = await page.$("#app > div > div > div > div > div > div > div > div > div > div > div > div > div > button:nth-child(3) > span");
-        const likes = await page.evaluate(el => el.textContent, $likes);
-        const dislikes = await page.evaluate(el => el.textContent, $dislikes);
-        problems[p.problemNumber].likes = parseInt(likes);
-        problems[p.problemNumber].dislikes = parseInt(dislikes);
+        const likes = parseInt(await page.evaluate(el => el.textContent, $likes));
+        const dislikes = parseInt(await page.evaluate(el => el.textContent, $dislikes));
+        problems[p.problemNumber].likes = likes;
+        problems[p.problemNumber].dislikes = dislikes;
         if (likes) {
           problems[p.problemNumber].rate = ((likes / (likes + dislikes)) * 100).toFixed(2) + "%";
         }

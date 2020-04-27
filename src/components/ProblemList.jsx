@@ -8,7 +8,7 @@ const ProblemList = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await axios.get("./problems.json");
+      const response = await axios.get("/problems.json");
       setProblems(Object.values(response.data));
     })();
   }, []);

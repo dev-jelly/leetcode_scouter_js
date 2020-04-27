@@ -81,14 +81,14 @@ const ProblemList = () => {
             title: "Rate",
             field: "rate",
             customFilterAndSearch: (term, rowData) => {
-              return rowData.rate > term;
+              return parseInt(rowData.rate) > term;
             },
           },
           {
             title: "Acceptance",
             field: "acceptance",
             customFilterAndSearch: (term, rowData) => {
-              return rowData.acceptance > term;
+              return parseInt(rowData.acceptance) > term;
             },
           },
           {

@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "aws-sdk": "^2.646.0",
     "axios": "^0.19.2",
+    "gh-pages": "^2.2.0",
     "material-table": "^1.57.2",
     "prettier": "^2.0.5",
     "puppeteer": "^3.0.1",
@@ -20,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -b master -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,6 +41,7 @@
     ]
   },
   "main": "index.js",
+  "homepage": "https://dev-jelly.github.io/leetcode_scouter_js",
   "author": "jelly <chm073@gmail.com>",
   "license": "MIT"
 }

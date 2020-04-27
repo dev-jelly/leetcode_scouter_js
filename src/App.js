@@ -5,7 +5,7 @@ import ProblemList from "./components/ProblemList";
 function App() {
   return (
     <div className="App">
-      <ProblemList></ProblemList>
+      <ProblemList />
     </div>
   );
 }

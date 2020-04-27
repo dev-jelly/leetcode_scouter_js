@@ -1,32 +1,31 @@
 .problem-link {
-    text-decoration: none;
-    color: deepskyblue;
+  text-decoration: none;
+  color: deepskyblue;
 }
 
 .problem-link:hover {
-    color: skyblue;
-
+  color: skyblue;
 }
 
 .title {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .difficulty {
-    color: white;
-    padding: 5px;
-    border-radius: 15px;
-    font-weight: bold;
+  color: white;
+  padding: 5px;
+  border-radius: 15px;
+  font-weight: bold;
 }
 
 .difficulty.easy {
-    background: green;
+  background: green;
 }
 
 .difficulty.medium {
-    background: darkorange;
+  background: darkorange;
 }
 
 .difficulty.hard {
-    background: red;
+  background: red;
 }

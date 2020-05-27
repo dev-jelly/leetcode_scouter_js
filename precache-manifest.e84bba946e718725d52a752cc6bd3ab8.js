@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fd00a74bb34a35d1f25f55b8bf4a3d7d",
+    "revision": "a3fc9c3a34ad028a46f868b64acc436f",
     "url": "/leetcode_scouter_js/index.html"
   },
   {
-    "revision": "1f4928431101bbbefb14",
+    "revision": "b4635b7d8c3d7e8be789",
     "url": "/leetcode_scouter_js/static/css/main.8c44ce03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/leetcode_scouter_js/static/js/2.67ad7a61.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1f4928431101bbbefb14",
-    "url": "/leetcode_scouter_js/static/js/main.35b07f4f.chunk.js"
+    "revision": "b4635b7d8c3d7e8be789",
+    "url": "/leetcode_scouter_js/static/js/main.525c9638.chunk.js"
   },
   {
     "revision": "708c80abbe7928b22e0f",
